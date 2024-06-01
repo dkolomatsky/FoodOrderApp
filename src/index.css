@@ -47,7 +47,7 @@ h1 {
   margin: 0;
   color: #ffc404;
   letter-spacing: 0.2rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 #meals {
