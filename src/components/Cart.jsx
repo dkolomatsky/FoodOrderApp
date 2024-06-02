@@ -14,14 +14,22 @@ export default function Cart() {
     return totalPrice + item.quantity * item.price;
   }, 0);
 
-  // метод для закрытия окна корзины
+  // метод для кнопки по закрытию окна корзины
   function handleCloseCart() {
     userProgressCtx.hideCart();
+  }
+  // метод для кнопки по открытию окна checkOut
+  function goToCheckOut() {
+    userProgressCtx.showCheckOut();
   }
 
   return (
     // оборачиваем наполнение корзины в кастомною компоненту модального окна
-    <Modal className="cart" open={userProgressCtx.progress === "cart"}>
+    <Modal
+      className="cart"
+      open={userProgressCtx.progress === "cart"} // определяем что если свойство прогресс в контексте равно cart то open будет true
+      onClose={userProgressCtx.progress === "cart" ? handleCloseCart : null} // условие что если мы уже на странице checkout то ничего не делаем а если где то на другом окне то закрыть окно
+    >
       <h2>You Cart</h2>
       <ul>
         {cartCtx.items.map((item) => (
@@ -40,7 +48,10 @@ export default function Cart() {
         <Button onlyText="true" onClick={handleCloseCart}>
           Close
         </Button>
-        <Button onClick={handleCloseCart}>Go to checkout</Button>
+        {/* кнопку Go to checkout показывать только если массыв items не пуст а если пуст то не показывать*/}
+        {cartCtx.items.length > 0 && (
+          <Button onClick={goToCheckOut}>Go to checkout</Button>
+        )}
       </p>
     </Modal>
   );
