@@ -1,8 +1,15 @@
 // компонента для создания карточки еды
+import { useContext } from "react";
 import { currencyFormatter } from "../utils/formatting";
 import Button from "./UI-items/Button";
+import CartContext from "../store/CartContext";
 
 export default function MealItem({ meal }) {
+  const cartCxt = useContext(CartContext); // вызываем хук и передаем в него значение контекста и сохраним в переменную для дальнейшего использования
+  // метод для добавления элемента в корзину при нажатии на кнопку
+  function handleAddMealToCart() {
+    cartCxt.addItem(meal); // из контекста получаем доступ к функции addItems и вызываем ее , передав через параметр элемент который пришел в компоненту MealItem через пропс из родительской компоненты Meal
+  }
   return (
     <li className="meal-item">
       <article>
@@ -17,7 +24,7 @@ export default function MealItem({ meal }) {
           <p className="meal-item-description">{meal.description}</p>
         </div>
         <p className="meal-item-actions">
-          <Button>Add to Cart</Button>
+          <Button onClick={handleAddMealToCart}>Add to Cart</Button>
         </p>
       </article>
     </li>
