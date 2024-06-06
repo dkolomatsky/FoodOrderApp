@@ -1,22 +1,3 @@
 [
-  {
-    "items": [
-      {
-        "id": "m2",
-        "name": "Margherita Pizza",
-        "price": "12.99",
-        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
-        "image": "images/margherita-pizza.jpg",
-        "quantity": 2
-      }
-    ],
-    "customer": {
-      "name": "Dmytro Kolomatskyi",
-      "email": "dkolomatsky@gmail.com",
-      "street": "třída Osvobození 317 , č.p. № 8",
-      "postal-code": "26101",
-      "city": "Příbram"
-    },
-    "id": "240.99187609269634"
-  }
+  
 ]
