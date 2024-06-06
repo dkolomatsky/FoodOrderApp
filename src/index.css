@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -247,6 +248,23 @@ h1 {
 
 .modal::backdrop {
   background-color: rgba(0, 0, 0, 0.55);
+}
+
+.center {
+  text-align: center;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+}
+
+.error-item {
+  text-align: center;
+  background-color: #ed3e53;
+  color: black;
+  font-weight: bold;
+  width: 300px;
 }
 
 @keyframes fade-slide-up {

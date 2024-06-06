@@ -5,6 +5,7 @@ const CartContext = createContext({
   items: [],
   addItem: (item) => {},
   removeItem: (id) => {},
+  clearCart: () => {},
 });
 // фунция reducer которая будет получать состояние, и при получении определенных действий будет изменять его и возвращать новое значение
 function cartReducer(state, action) {
@@ -48,6 +49,9 @@ function cartReducer(state, action) {
 
     return { ...state, items: updatedItems }; // возвращаем обьект с обновленными элементами в массиве items
   }
+  if (action.type === "CLEAR_CART") {
+    return { ...state, items: [] }; // возвращаем обьект с обновленными элементами в массиве items в начальном состоянии а именно пустым масивом
+  }
   return state;
 }
 
@@ -71,11 +75,19 @@ export function CartContextProvider({ children }) {
       id: id,
     });
   }
+  // функция для очистки корзины после отправки заказа на сервер
+  function clearCart() {
+    dispatchCartAction({
+      type: "CLEAR_CART",
+    });
+  }
+
   // создаем кастомный обьект который будет использоваться как value для контекста
   const cartContext = {
     items: cartState.items, // создали свойство со значением стейта
     addItem, // создали свойство с методом addItem (так как название свойства и метода одинаковые то можно сократить код)
     removeItem, // создали свойство с методом addItem (так как название свойства и метода одинаковые то можно сократить код)
+    clearCart,
   };
   return (
     <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>

@@ -8,14 +8,6 @@
         "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
         "image": "images/margherita-pizza.jpg",
         "quantity": 2
-      },
-      {
-        "id": "m3",
-        "name": "Caesar Salad",
-        "price": "7.99",
-        "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
-        "image": "images/caesar-salad.jpg",
-        "quantity": 1
       }
     ],
     "customer": {
@@ -25,62 +17,6 @@
       "postal-code": "26101",
       "city": "Příbram"
     },
-    "id": "474.55684218872204"
-  },
-  {
-    "items": [
-      {
-        "id": "m2",
-        "name": "Margherita Pizza",
-        "price": "12.99",
-        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
-        "image": "images/margherita-pizza.jpg",
-        "quantity": 2
-      },
-      {
-        "id": "m3",
-        "name": "Caesar Salad",
-        "price": "7.99",
-        "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
-        "image": "images/caesar-salad.jpg",
-        "quantity": 1
-      }
-    ],
-    "customer": {
-      "name": "Dmytro Kolomatskyi",
-      "email": "dkolomatsky@gmail.com",
-      "street": "třída Osvobození 317 , č.p. № 8",
-      "postal-code": "26101",
-      "city": "Příbram"
-    },
-    "id": "734.5704854926233"
-  },
-  {
-    "items": [
-      {
-        "id": "m2",
-        "name": "Margherita Pizza",
-        "price": "12.99",
-        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
-        "image": "images/margherita-pizza.jpg",
-        "quantity": 2
-      },
-      {
-        "id": "m3",
-        "name": "Caesar Salad",
-        "price": "7.99",
-        "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
-        "image": "images/caesar-salad.jpg",
-        "quantity": 1
-      }
-    ],
-    "customer": {
-      "name": "Dmytro Kolomatskyi",
-      "email": "dkolomatsky@gmail.com",
-      "street": "třída Osvobození 317 , č.p. № 8",
-      "postal-code": "26101",
-      "city": "Příbram"
-    },
-    "id": "314.95041670988155"
+    "id": "240.99187609269634"
   }
 ]
